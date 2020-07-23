@@ -78,14 +78,14 @@ struct webview_priv
 };
 #elif defined(WEBVIEW_COCOA)
 #import <Cocoa/Cocoa.h>
-#import <WebKit/WebKit.h>
+#import <WebKit/WKWebView.h>
 #import <objc/runtime.h>
 
 struct webview_priv
 {
   NSAutoreleasePool *pool;
   NSWindow *window;
-  WebView *webview;
+  WKWebView *webview;
   id delegate;
   int should_exit;
 };
